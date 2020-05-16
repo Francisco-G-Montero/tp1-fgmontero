@@ -10,7 +10,17 @@ $(document).ready(function () {
     random=Math.floor(Math.random()*3);
     $("#frase").attr("class", "frase"+random);
     $("#frase").css("visibility","visible");
-});
 
-
-//CREDENCIAL YT API CLAVE AIzaSyCpnQsX98TEFc48-anVmCGuMSln-TlmyFM
+    $("#buscarCanal").on("click",function(){
+        var canalID=$("#canalID").val();
+        $.ajax({
+            type: "get",
+            url: "https://www.googleapis.com/youtube/v3/channels?part=snippet&forUsername="+canalID+"&key=AIzaSyCpnQsX98TEFc48-anVmCGuMSln-TlmyFM",
+            data: "data",
+            dataType: "dataType",
+            success: function (response) {
+                console.log(response);
+            }
+        });
+    })   
+})

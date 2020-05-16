@@ -7,10 +7,7 @@
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="text/javascript" src="auth.js"></script>
     <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script>
-    <script type="text/javascript" src="my_uploads.js"></script>
-
     <script src="main.js"></script>
 </head>
 <body>
@@ -33,12 +30,8 @@
             <p id="tituloFrase">Frase aleatoria:</p>
             <p id="frase" class=""></p>
             <br><br>
-            <button class="btn green" id="enter-button">Logear yt</button>
-            <button class="btn green" id="exit-button">Desloguear</button>
-            Please <a href="#" id="login-link">authorize</a> to continue.
-                
-            <button id="prev-button" class="btn paging-button" onclick="previousPage();">Previous Page</button>
-            <button id="next-button" class="btn paging-button" onclick="nextPage();">Next Page</button>
+            <input id="canalID" type="text">
+            <button class="btn" id="buscarCanal">Buscar Canal</button>
             <video controls>
                 <source src="video/PresentacionTygweb.mp4" type="">
                 Tu navegador no soporta los tag de video.
