@@ -154,3 +154,10 @@ a:visited{
 .frase2{
     text-shadow: 1px 1px 20px rgba(159, 174, 255, 0.9);
 }
+.btn{
+    border: none;
+    background-color: rgb(62, 131, 21);
+    border-radius: 4px;
+    padding: 10px;
+    
+}
