@@ -17,10 +17,12 @@ $(document).ready(function () {
         $.ajax({
             type: "get",
             url: "https://www.googleapis.com/youtube/v3/channels?part=snippet&forUsername="+canalID+"&key=AIzaSyCpnQsX98TEFc48-anVmCGuMSln-TlmyFM",
-            data: "data",
-            dataType: "dataType",
+            dataType: "json",
             success: function (response) {
                 console.log(response);
+            },
+            error: function(req,status,err){
+                console.log(err);
             }
         });
     })   
