@@ -13,6 +13,7 @@ $(document).ready(function () {
 
     $("#buscarCanal").on("click",function(){
         var canalID=$("#canalID").val();
+        console.log(canalID);
         $.ajax({
             type: "get",
             url: "https://www.googleapis.com/youtube/v3/channels?part=snippet&forUsername="+canalID+"&key=AIzaSyCpnQsX98TEFc48-anVmCGuMSln-TlmyFM",
