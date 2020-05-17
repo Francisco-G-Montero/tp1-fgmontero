@@ -1,6 +1,6 @@
-var frases=["La exploración espacial designa los esfuerzos del ser humano en estudiar el espacio",
-            "y sus astros desde el punto de vista científico y de su explotación económica. Estos",
-            "esfuerzos pueden involucrar tanto seres humanos viajando en naves espaciales como"];
+var frases=["Ganar no lo es todo, sino querer ganar. – Vince Lombardi.",
+            "El qusufrir ya sufre el temor.",
+            "No prometas nada cuando te sientas eufórico."];
 
 
 
