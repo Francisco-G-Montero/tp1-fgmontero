@@ -1,5 +1,5 @@
 var frases=["Ganar no lo es todo, sino querer ganar. – Vince Lombardi.",
-            "El qusufrir ya sufre el temor.",
+            "Vic es una rronttiita.",
             "No prometas nada cuando te sientas eufórico."];
 
 
