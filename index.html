@@ -21,7 +21,7 @@
         <div id="lateral">
             <ul>
                 <li id="apilinkLi">API links</li>
-                <li><a href="">Link API 1</a></li>
+                <li><a href="#" id="youtubeBtn">Buscar Canal Youtube</a></li>
                 <li><a href="">Link API 2</a></li>
             </ul>
           
@@ -29,13 +29,33 @@
         <div id="cuerpo">
             <p id="tituloFrase">Frase aleatoria:</p>
             <p id="frase" class=""></p>
-            <br><br>
-            <input id="canalID" type="text">
-            <button class="btn" id="buscarCanal">Buscar Canal</button>
             <video controls>
                 <source src="video/PresentacionTygweb.mp4" type="">
                 Tu navegador no soporta los tag de video.
             </video>
+            <br>
+            <div class="youtube">
+                <p>API de Youtube, ingresá el nombre del canal y se mostrarán los datos del mismo</p><br>
+                <input id="canalID" type="text"
+                ><button id="buscarCanal">Buscar Canal</button><br>
+                <table class="yotubeTable">
+                        <tr>
+                            <th>Canal</th>
+                            <th>Descripcion</th>
+                            <th>Cant. Videos</th>
+                            <th>Total Vistas</th>
+                            <th>Suscriptores</th>
+                        </tr>
+                   
+                        <tr>
+                            <td id="ytName"></td>
+                            <td id="ytDesc"></td>
+                            <td id="ytVideoCount"></td>
+                            <td id="ytVideoViews"></td>
+                            <td id="ytSus"></td>
+                        </tr>
+                </table>
+            </div>
         </div>
     </div>
     <footer>
