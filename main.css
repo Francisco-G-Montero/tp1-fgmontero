@@ -55,7 +55,7 @@ header{
 
 #cuerpo{
     height: 100%;
-    width: 75%;
+    width: 80%;
     text-align: center;
 }
 #cuerpo video{
@@ -158,32 +158,59 @@ a:visited{
 .frase2{
     text-shadow: 1px 1px 20px rgba(159, 174, 255, 0.9);
 }
-#buscarCanal{
+.buscador{
     border: none;
     height: 45px;
-    background-color: rgb(62, 131, 21);
     border-radius: 0 10px 10px 0;
     padding: 10px;
-    
+    background-color: rgba(56, 159, 255, 0.2);
+
 }
-#canalID{
+#buscarCanal{
+    background-color: rgba(196, 48, 43, 1);    
+}
+
+input{
     height: 42px;
     color: black;
 }
-.youtube{
+.api{
+    border-radius: 10px;
     width: 96%;
     text-align: center;
     padding-bottom: 30px;
+    padding-top: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.youtube{
+    background-color: rgba(196, 48, 43, .3);
+}
+.weather{
+    background-color: rgba(56, 159, 255, 0.3);
 }
 table {
     margin-left: 40px;
     border-collapse: collapse;
-    width: 100%;
-  }
-  
-  th, td {
+    width: 90%;
+}
+th, td {
     text-align: left;
     padding: 8px;
-  }
+}
+.yotubeTable th,.yotubeTable td {
+    background-color: rgba(196, 48, 43, .2);
+}
+.climaTable th, .climaTable td{
+    background-color: rgba(56, 159, 255, 0.2);
+}
   
-  tr:nth-child(even) {background-color: #3c3f41;}
+#descIcon{
+    margin: 0;
+    padding: 0;
+    width: 44px;
+    height: 44px;
+    filter: drop-shadow(5px 5px 10px #fff);
+    display: block;
+}
+tr:nth-child(even) {background-color: #3c3f41;}

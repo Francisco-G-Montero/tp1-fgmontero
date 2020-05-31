@@ -22,7 +22,7 @@
             <ul>
                 <li id="apilinkLi">API links</li>
                 <li><a href="#" id="youtubeBtn">Buscar Canal Youtube</a></li>
-                <li><a href="">Link API 2</a></li>
+                <li><a href="#" id="climaBtn">Obtener Clima Actual</a></li>
             </ul>
           
         </div>
@@ -34,10 +34,10 @@
                 Tu navegador no soporta los tag de video.
             </video>
             <br>
-            <div class="youtube">
-                <p>API de Youtube, ingresá el nombre del canal y se mostrarán los datos del mismo</p><br>
+            <div class="api youtube">
+                <p>Esta es una API de Youtube: ingresá el nombre del canal y se mostrarán los datos del mismo.</p><br>
                 <input id="canalID" type="text"
-                ><button id="buscarCanal">Buscar Canal</button><br>
+                ><button class="buscador" id="buscarCanal">Buscar Canal</button><br>
                 <table class="yotubeTable">
                         <tr>
                             <th>Canal</th>
@@ -55,6 +55,28 @@
                             <td id="ytSus"></td>
                         </tr>
                 </table>
+            </div>
+            <div class="api weather">                      
+                    <p>Esta API obtiene el clima actual: ingresá el nombre de una localidad o país. <span style="color: rgba(255, 239, 10,.5);">(tenga en cuenta los acentos)</span></p><br>
+                    <input id="localidadName" type="text"
+                    ><button  class="buscador" id="buscarClima">Buscar Canal</button><br>
+                    <table class="climaTable">
+                            <tr>
+                                <th>Localidad</th>
+                                <th>Temperatura</th>
+                                <th>Sensación</th>
+                                <th>Humedad</th>
+                                <th>Descripción</th>
+                            </tr>
+                       
+                            <tr>
+                                <td id="localTable"></td>
+                                <td id="tempTable"></td>
+                                <td id="sensTable"></td>
+                                <td id="humTable"></td>
+                                <td id="descTable"><img id="descIcon" src="http://openweathermap.org/img/wn/10d@2x.png"></img></td>
+                            </tr>
+                    </table>
             </div>
         </div>
     </div>
