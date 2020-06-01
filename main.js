@@ -1,30 +1,39 @@
+const weather_api="c5bed94c80bf29a3973e0530107d6480";
+const yt_api="AIzaSyCpnQsX98TEFc48-anVmCGuMSln-TlmyFM";
 var frases=["Ganar no lo es todo, sino querer ganar. – Vince Lombardi.",
-            "Vic es una SUPER rronttiita. loviu",
+            "No importa cuanto tiempo tengas, sino cómo lo usas",
             "No prometas nada cuando te sientas eufórico."];
 
 
-
-$(document).ready(function () {
-    $(".youtube").hide();
-    $(".weather").hide();
-
+function mostrarFrase(){
     var random=Math.floor(Math.random()*3);
     $("#frase").text(frases[random]);
     random=Math.floor(Math.random()*3);
     $("#frase").attr("class", "frase"+random);
     $("#frase").css("visibility","visible");
+}
+
+$(document).ready(function () {
+    $(".youtube").hide();
+    $(".weather").hide();
+
+    mostrarFrase();
 
     $("#youtubeBtn").on("click",function(){
         $(".youtube").slideToggle();
         $(".youtube").show();
-    })
+        $(".weather").slideUp();
+    });
 
     $("#climaBtn").on("click",function(){
         $(".weather").slideToggle();
+        $(".youtube").slideUp();
         $(".weather").show();
-    })   
+    });
     
-  
+    $("#frase").on("click",function(){
+        mostrarFrase();
+    });
 
     $("#buscarCanal").on("click",function(){
         var canalID=$("#canalID").val();
@@ -32,7 +41,7 @@ $(document).ready(function () {
         console.log(canalID);
         $.ajax({
             type: "get",
-            url: "https://www.googleapis.com/youtube/v3/search?part=id&maxResults=1&q="+canalID+"&type=channel&key=AIzaSyCpnQsX98TEFc48-anVmCGuMSln-TlmyFM",
+            url: "https://www.googleapis.com/youtube/v3/search?part=id&maxResults=1&q="+canalID+"&type=channel&key="+yt_api,
             dataType: "json",
             success: function (response) {
                 
@@ -41,7 +50,7 @@ $(document).ready(function () {
 
                     $.ajax({
                         type: "get",
-                        url: "https://www.googleapis.com/youtube/v3/channels?part=snippet%2Cstatistics&id="+id+"&maxResults=1&key=AIzaSyCpnQsX98TEFc48-anVmCGuMSln-TlmyFM",
+                        url: "https://www.googleapis.com/youtube/v3/channels?part=snippet%2Cstatistics&id="+id+"&maxResults=1&key="+yt_api,
                         dataType: "json",
                         success: function (response) {
                             console.log(response);
@@ -76,7 +85,7 @@ $(document).ready(function () {
         console.log(localidad);
         $.ajax({
             type: "get",
-            url: "https://api.openweathermap.org/data/2.5/weather?q="+localidad+"&units=metric&appid=76eeb2c2fa7256edae0d43e7426f5644",
+            url: "https://api.openweathermap.org/data/2.5/weather?q="+localidad+"&units=metric&appid="+weather_api,
             dataType: "json",
             success: function (data) {
                 console.log(data);
