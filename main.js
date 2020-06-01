@@ -97,7 +97,7 @@ $(document).ready(function () {
 
             },
             error: function(req,status,err){
-                alert("El País, Provincia o localidad no se ha encontrado por la API, atienda a posibles errores ortográficos");
+                alert(" El País, Provincia o localidad no se ha encontrado por la API, atienda a posibles errores ortográficos");
                 console.log(err);
             }
         });
